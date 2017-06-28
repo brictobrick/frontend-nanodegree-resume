@@ -40,7 +40,7 @@ var bio = {
       $("#skills").append(formattedSkills);
     });
   }
-}
+};
 
 var work = {
 	"jobs": [
@@ -73,7 +73,7 @@ var work = {
       $(".work-entry").append(formattedWorkDescription);
     });
   }
-}
+};
 
 var projects = {
 	"projects": [{
@@ -97,7 +97,7 @@ var projects = {
       });
     });
   }
-}
+};
 
 var education = {
   "schools": [
@@ -155,7 +155,7 @@ var education = {
       $(".education-entry:last").append(formattedonlineURL);
     });
   }
-}
+};
 
 //googleMap
 $("#mapDiv").append(googleMap);
