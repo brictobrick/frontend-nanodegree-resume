@@ -14,25 +14,20 @@ var bio = {
   "display": function() {
     // header
     var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedHeaderRole);
     var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
+    $("#header").prepend(formattedHeaderRole);
     $("#header").prepend(formattedHeaderName);
     // contacts
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $(".flex-box").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $(".flex-box").append(formattedEmail);
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $(".flex-box").append(formattedTwitter);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $(".flex-box").append(formattedGithub);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $(".flex-box").append(formattedLocation);
+    $(".flex-box").append(formattedMobile, formattedEmail, formattedTwitter, formattedGithub, formattedLocation);
     // header
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedBioPic);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMsg);
+    $("#header").append(formattedBioPic, formattedWelcomeMsg);
     // skills
     $("#header").append(HTMLskillsStart);
     bio.skills.forEach(function(skill) {
